@@ -1,19 +1,19 @@
 let greenButton = document.querySelector('.simon-button.green');
 greenButton.addEventListener('click', function() {
-  alert('You clicked the green button');
+  document.querySelector('.green').style.backgroundColor = 'lawngreen';
 });
 
 let redButton = document.querySelector('.simon-button.red');
 redButton.addEventListener('click', function() {
-  alert('You clicked the red button');
+  document.querySelector('.red').style.backgroundColor = 'pink';
 });
 
 let yellowButton = document.querySelector('.simon-button.yellow');
 yellowButton.addEventListener('click', function() {
-  alert('You clicked the yellow button');
+  document.querySelector('.yellow').style.backgroundColor = 'lemonchiffon';
 });
 
 let blueButton = document.querySelector('.simon-button.blue');
 blueButton.addEventListener('click', function() {
-  alert('You clicked the blue button');
+  document.querySelector('.blue').style.backgroundColor = 'skyblue';
 });
