@@ -1,21 +1,27 @@
+let userClicks = [];
+
 let greenButton = document.querySelector('.simon-button.green');
 greenButton.addEventListener('click', function() {
   document.querySelector('.green').style.backgroundColor = 'lawngreen';
+  userClicks.push('green');
 });
 
 let redButton = document.querySelector('.simon-button.red');
 redButton.addEventListener('click', function() {
   document.querySelector('.red').style.backgroundColor = 'pink';
+  userClicks.push('red');
 });
 
 let yellowButton = document.querySelector('.simon-button.yellow');
 yellowButton.addEventListener('click', function() {
   document.querySelector('.yellow').style.backgroundColor = 'lemonchiffon';
+  userClicks.push('yellow');
 });
 
 let blueButton = document.querySelector('.simon-button.blue');
 blueButton.addEventListener('click', function() {
   document.querySelector('.blue').style.backgroundColor = 'skyblue';
+  userClicks.push('blue');
 });
 // let startButton = document.getElementById('start');
 
@@ -25,9 +31,7 @@ blueButton.addEventListener('click', function() {
 
 // startButton.addEventListener('click', startGame);
 
-let userClicks = [];
 let prevSequence = [];
-
 
 let buttonPresses = 0;
 
@@ -39,8 +43,12 @@ function generateSeq() {
 }
 
 function nextColor() {
-  let currentSeq = prevSequence.push(generateSeq());
+  prevSequence.push(generateSeq());
 }
+
+//active pseudoclass
+
+
 
 //list1 - empty list to append the user color that is clicked
 //to add nameoflist.push
