@@ -20,7 +20,7 @@ blueButton.addEventListener('click', function() {
 
 // const nonRandom = ["red", "blue", "blue", "green"];
 alert('red')
-let afterAlert = document.querySelector('.simon-button.red');
+let afterAlert = document.querySelector('#tapRed');
 let afterAlert2 = document.getElementById('tapBlue');
 // let afterAlert2 = document.querySelector('.simon-button.blue');
 // let afterAlert3 = document.querySelector('.simon-button.green');
@@ -47,3 +47,5 @@ afterAlert.addEventListener("click", () => {
 //     alert('GAME OVER!');
 //   }
 // }
+
+
