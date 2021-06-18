@@ -15,13 +15,32 @@
     <h1>Simon</h1>
 
     <div class="simon-container">
-      <div class="simon-button green"></div> 
+      <div class="simon-button green"></div>
       <div class="simon-button red"></div>
       <div class="simon-button yellow"></div>
       <div class="simon-button blue"></div>
     </div>
 
     <div style="text-align:center;"><button id = 'start'>START GAME</button></div>
+    <div class="hidden">
+      <audio
+        src="SimonSound1Green.mp3"
+        data-sound="green"
+      ></audio>
+      <audio
+        src="SimonSound2Red.mp3"
+        data-sound="red"
+      ></audio>
+      <audio
+        src="SimonSound3Yellow.mp3"
+        data-sound="yellow"
+      ></audio>
+      <audio
+        src="SimonSound4Blue.mp3"
+        data-sound="blue"
+      ></audio>
+    </div>
+
   </section>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
