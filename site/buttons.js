@@ -1,54 +1,101 @@
-let userClicks = [];
-
-let greenButton = document.querySelector('.simon-button.green');
-greenButton.addEventListener('click', function() {
-  document.querySelector('.green').style.backgroundColor = 'lawngreen';
-  userClicks.push('green');
+$('.simon-button.green').on('mousedown', function () {
+  document.querySelector('.simon-button.green').style.filter = 'brightness(150%)';
 });
 
-let redButton = document.querySelector('.simon-button.red');
-redButton.addEventListener('click', function() {
-  document.querySelector('.red').style.backgroundColor = 'pink';
-  userClicks.push('red');
+$('.simon-button.green').on('mouseup', function () {
+  document.querySelector('.simon-button.green').style.filter = 'brightness(100%)';
 });
 
-let yellowButton = document.querySelector('.simon-button.yellow');
-yellowButton.addEventListener('click', function() {
-  document.querySelector('.yellow').style.backgroundColor = 'lemonchiffon';
-  userClicks.push('yellow');
+$('.simon-button.red').on('mousedown', function () {
+  document.querySelector('.simon-button.red').style.filter = 'brightness(150%)';
 });
 
-let blueButton = document.querySelector('.simon-button.blue');
-blueButton.addEventListener('click', function() {
-  document.querySelector('.blue').style.backgroundColor = 'skyblue';
-  userClicks.push('blue');
+$('.simon-button.red').on('mouseup', function () {
+  document.querySelector('.simon-button.red').style.filter = 'brightness(100%)';
 });
-// let startButton = document.getElementById('start');
 
-// function startGame() {
-//   startButton.classList.add('hidden');
+$('.simon-button.yellow').on('mousedown', function () {
+  document.querySelector('.simon-button.yellow').style.filter = 'brightness(150%)';
+});
+
+$('.simon-button.yellow').on('mouseup', function () {
+  document.querySelector('.simon-button.yellow').style.filter = 'brightness(100%)';
+});
+
+$('.simon-button.blue').on('mousedown', function () {
+  document.querySelector('.simon-button.blue').style.filter = 'brightness(150%)';
+});
+
+$('.simon-button.blue').on('mouseup', function () {
+  document.querySelector('.simon-button.blue').style.filter = 'brightness(70%)';
+});
+
+//This displays the the time for how long it took the user to complete the pattern 
+//The user wants to beat their previous time each round
+
+let seconds = 0;
+let el = document.querySelector('.timeDisplay');
+
+function incrementSeconds() {
+  seconds += 1;
+  el.innerHTML = seconds;
+}
+
+setInterval(incrementSeconds, 1000);
+
+// let greenButton = document.querySelector('.simon-button.green');
+// greenButton.addEventListener('click', function() {
+//   document.querySelector('.green').style.backgroundColor = 'lawngreen';
+//   userClicks.push('green');
+// });
+
+// let redButton = document.querySelector('.simon-button.red');
+// redButton.addEventListener('click', function() {
+//   document.querySelector('.red').style.backgroundColor = 'pink';
+//   userClicks.push('red');
+// });
+
+// let yellowButton = document.querySelector('.simon-button.yellow');
+// yellowButton.addEventListener('click', function() {
+//   document.querySelector('.yellow').style.backgroundColor = 'lemonchiffon';
+//   userClicks.push('yellow');
+// });
+
+// let blueButton = document.querySelector('.simon-button.blue');
+// blueButton.addEventListener('click', function() {
+//   document.querySelector('.blue').style.backgroundColor = 'lightblue';
+//   userClicks.push('blue');
+// });
+
+
+// let prevSequence = [];
+
+// let buttonPresses = 0;
+
+// function generateSeq() {
+//   let tiles = ['red', 'green', 'blue', 'yellow'];
+//   let randomColor = tiles[Math.floor(Math.random() * tiles.length)]; //returns index of random color in tile 
+
+//   return randomColor;
 // }
 
-// startButton.addEventListener('click', startGame);
+// function nextColor() {
+//   prevSequence.push(generateSeq());
+// }
 
-let prevSequence = [];
+// let compareSeqs = (prevSequence, userClicks) =>
+//   prevSequence.length === userClicks.length &&
+//   prevSequence.every((v, i) => v === userClicks[i]);
 
-let buttonPresses = 0;
+//   console.log(compareSeqs(prevSequence, userClicks));
+//   console.log(userClicks);
 
-function generateSeq() {
-  let tiles = ['red', 'green', 'blue', 'yellow'];
-  let randomColor = tiles[Math.floor(Math.random() * tiles.length)]; //returns index of random color in tile 
-
-  return randomColor;
-}
-
-function nextColor() {
-  prevSequence.push(generateSeq());
-}
-
-//active pseudoclass
-
-
+// if (compareSeqs){
+//   nextColor();
+// }
+// else{
+//   alert('GAME OVER');
+// }
 
 //list1 - empty list to append the user color that is clicked
 //to add nameoflist.push
@@ -62,5 +109,4 @@ function nextColor() {
   //else
     //lose
     //display buttonPress
-    //buttonPress reset to 0 
-    
+    //buttonPress reset to 0

@@ -53,7 +53,14 @@ html {
   background-color: #FBBD08;
 }
 
-.simon-button.blue {
-  background-color: #2185D0;
+.simon-button.blue{
+  background-color: blue;
 }
+
+.timeDisplay {
+  border: solid rgb(227, 131, 247) 5px;
+  text-align: center;
+  background-color: white;
+}
+
 
