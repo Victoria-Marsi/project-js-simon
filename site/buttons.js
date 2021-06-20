@@ -1,9 +1,11 @@
+let playerOrder = [];
 $('.simon-button.green').on('mousedown', function () {
   document.querySelector('.simon-button.green').style.filter = 'brightness(150%)';
 });
 
 $('.simon-button.green').on('mouseup', function () {
   document.querySelector('.simon-button.green').style.filter = 'brightness(100%)';
+  playerOrder.push('green')
 });
 
 $('.simon-button.red').on('mousedown', function () {
@@ -12,6 +14,7 @@ $('.simon-button.red').on('mousedown', function () {
 
 $('.simon-button.red').on('mouseup', function () {
   document.querySelector('.simon-button.red').style.filter = 'brightness(100%)';
+  playerOrder.push('red')
 });
 
 $('.simon-button.yellow').on('mousedown', function () {
@@ -20,6 +23,7 @@ $('.simon-button.yellow').on('mousedown', function () {
 
 $('.simon-button.yellow').on('mouseup', function () {
   document.querySelector('.simon-button.yellow').style.filter = 'brightness(100%)';
+  playerOrder.push('yellow')
 });
 
 $('.simon-button.blue').on('mousedown', function () {
@@ -28,6 +32,7 @@ $('.simon-button.blue').on('mousedown', function () {
 
 $('.simon-button.blue').on('mouseup', function () {
   document.querySelector('.simon-button.blue').style.filter = 'brightness(70%)';
+  playerOrder.push('blue')
 });
 
 //This displays the the time for how long it took the user to complete the pattern 
@@ -42,6 +47,19 @@ function incrementSeconds() {
 }
 
 setInterval(incrementSeconds, 1000);
+
+let order = ['red', 'red', 'blue', 'green', 'red', 'red', 'green', 'blue'];
+
+let equals = (order, playerOrder) => JSON.stringify(order) === JSON.stringify(playerOrder);
+if(equals(order, playerOrder)) {
+  alert("Good job! It took you " + seconds + " seconds!");
+}
+ else {
+  alert("GAME OVER!");
+ }
+ console.log(playerOrder);
+
+
 
 // let greenButton = document.querySelector('.simon-button.green');
 // greenButton.addEventListener('click', function() {
