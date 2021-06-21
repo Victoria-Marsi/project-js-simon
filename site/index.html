@@ -14,64 +14,30 @@
 <body>
   <section id="content">
     <h1>Simon</h1>
+    <div class="container">
+      <div class="inst">
+        <div style="text-align:left;" id='pattern'>Pattern to follow: red, red, blue, green, red, red, green, blue</div>
+        <div style="text-align:left;" id='inst'>Instructions: Click 'START GAME' when you are ready and click your way
+          through the pattern. Click reset to try and beat your time!</div>
+      </div>
 
-    <div class="simon-container">
-      <div class="simon-button green"></div>
-      <div class="simon-button red"></div>
-      <div class="simon-button yellow"></div>
-      <div class="simon-button blue"></div>
+
+      <div class="simon-container">
+        <div class="simon-button green"></div>
+        <div class="simon-button red"></div>
+        <div class="simon-button yellow"></div>
+        <div class="simon-button blue"></div>
+      </div>
     </div>
 
-      <div class= "timeDisplay"></div>
-  
-    <div style="text-align:center;"><button id = 'start'>START GAME</button><button id = 'reset'>RESET</button></div>
-    
+    <div class="timeDisplay"></div>
 
-    <div style="text-align:left;" id = 'pattern'>Pattern to follow: red, red, blue, green, red, red, green, blue</div>
-    <div style="text-align:left;" id = 'inst'>Instructions: Click 'START GAME' when you are ready and click your way through the pattern. Try again to beat your time!</div>
-
-    <div class="hidden">
-      <audio
-        src="SimonSound1Green.mp3"
-        data-sound="green"
-      ></audio>
-      <audio
-        src="SimonSound2Red.mp3"
-        data-sound="red"
-      ></audio>
-      <audio
-        src="SimonSound3Yellow.mp3"
-        data-sound="yellow"
-      ></audio>
-      <audio
-        src="SimonSound4Blue.mp3"
-        data-sound="blue"
-      ></audio>
-    </div>
+    <div style="text-align:center;"><button id='start'>START GAME</button><button id='reset'>RESET</button></div>
 
   </section>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
     </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   <script src="simon.js"></script>
   <script src="buttons.js"></script>

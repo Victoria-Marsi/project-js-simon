@@ -6,92 +6,100 @@ let el = document.querySelector('.timeDisplay');
 
 $('.simon-button.green').on('mousedown', function () {
   document.querySelector('.simon-button.green').style.filter = 'brightness(150%)';
+  let greenSound = new Audio('SimonSound1Green.mp3');
+  greenSound.play();
 });
 
 $('.simon-button.green').on('mouseup', function () {
   document.querySelector('.simon-button.green').style.filter = 'brightness(100%)';
-  if(order[playerStep] == 'green') {
+  if (order[playerStep] == 'green') {
     playerOrder.push('green');
     playerStep += 1;
     console.log("Guess correct");
-    if(order.length == playerOrder.length){
+    if (order.length == playerOrder.length) {
       alert("Right length");
-    }  
-    if(playerOrder.length == order.length) {
+    }
+    if (playerOrder.length == order.length) {
       alert('It took you ' + seconds + ' seconds to win!');
-    } 
+    }
   }
-   else {
-    console.log("GAME OVER!");
-   }
+  else {
+    alert("GAME OVER!");
+  }
 });
 
 $('.simon-button.red').on('mousedown', function () {
   document.querySelector('.simon-button.red').style.filter = 'brightness(150%)';
+  let redSound = new Audio('SimonSound2Red.mp3');
+  redSound.play();
 });
 
 $('.simon-button.red').on('mouseup', function () {
   document.querySelector('.simon-button.red').style.filter = 'brightness(100%)';
-  if(order[playerStep] == 'red') {
+  if (order[playerStep] == 'red') {
     playerOrder.push('red');
     playerStep += 1;
     console.log("Guess correct");
-    if(order.length == playerOrder.length){
+    if (order.length == playerOrder.length) {
       console.log("Right length");
     }
-    if(playerOrder.length == order.length) {
+    if (playerOrder.length == order.length) {
       alert('It took you ' + seconds + ' seconds to win!');
-    }   
+    }
   }
-   else {
+  else {
     alert("GAME OVER!");
-   }
+  }
 
 });
 
 $('.simon-button.yellow').on('mousedown', function () {
   document.querySelector('.simon-button.yellow').style.filter = 'brightness(150%)';
+  let yellowSound = new Audio('SimonSound3Yellow.mp3');
+  yellowSound.play();
 });
 
 $('.simon-button.yellow').on('mouseup', function () {
   document.querySelector('.simon-button.yellow').style.filter = 'brightness(100%)';
-  if(order[playerStep] == 'yellow') {
+  if (order[playerStep] == 'yellow') {
     playerOrder.push('yellow');
     playerStep += 1;
     console.log("Guess correct");
-    if(order.length == playerOrder.length){
+    if (order.length == playerOrder.length) {
       console.log("Right length");
     }
-    if(playerOrder.length == order.length) {
+    if (playerOrder.length == order.length) {
       alert('It took you ' + seconds + ' seconds to win!');
-    } 
+    }
   }
-   else {
+  else {
     alert("GAME OVER!");
-   }
+  }
 
 });
 
 $('.simon-button.blue').on('mousedown', function () {
   document.querySelector('.simon-button.blue').style.filter = 'brightness(150%)';
+  let blueSound = new Audio('SimonSound4Blue.mp3');
+  blueSound.play();
 });
 
 $('.simon-button.blue').on('mouseup', function () {
   document.querySelector('.simon-button.blue').style.filter = 'brightness(70%)';
-  if(order[playerStep] == 'blue') {
+  if (order[playerStep] == 'blue') {
     playerOrder.push('blue');
     playerStep += 1;
     console.log("Guess correct");
-    if(order.length == playerOrder.length){
+    if (order.length == playerOrder.length) {
       console.log("Right length");
-    }  
-    if(playerOrder.length == order.length) {
+    }
+    if (playerOrder.length == order.length) {
       alert('It took you ' + seconds + ' seconds to win!');
-    } 
+    }
   }
-   else {
+  else {
     alert("GAME OVER!");
-   }
+  }
 
 });
 
@@ -108,6 +116,7 @@ document.getElementById('start').addEventListener('click', function (event) {
   setInterval(incrementSeconds, 1000);
 });
 
-// document.getElementById('reset').addEventListener('click', function (event) {
-//   <a href=""></a>;
-// });
+document.getElementById('reset').addEventListener('click', function (event) {
+  document.location.reload();
+});
+

@@ -20,8 +20,8 @@ html {
 }
 
 .simon-container {
-  margin: 20px auto;
-  width:400px;
+  /* margin: 20px auto; */
+  width:424px;
   height:400px;
   background-color:#fff;
   display:grid;
@@ -29,6 +29,7 @@ html {
   grid-row: auto auto;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
+  margin-left: 20px;
 }
 
 .simon-container .simon-button {
@@ -78,3 +79,6 @@ html {
   background: white;
 }
 
+.container{
+  display: flex;
+}
