@@ -108,6 +108,6 @@ document.getElementById('start').addEventListener('click', function (event) {
   setInterval(incrementSeconds, 1000);
 });
 
-document.getElementById('reset').addEventListener('click', function (event) {
-  <a href="file:///C:/Users/torim/OneDrive/Documents/Liberal%20Arts%20in%20Silicon%20Valley%20Summer%202021/project-js-simon/site/index.html"></a>;
-});
+// document.getElementById('reset').addEventListener('click', function (event) {
+//   <a href=""></a>;
+// });
